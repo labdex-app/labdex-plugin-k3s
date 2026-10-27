@@ -1,0 +1,21 @@
+id: k3s
+name: k3s / Kubernetes
+kind: integration
+tags: [compute, kubernetes, status]
+version: "1.0"
+labdex: ">=1.3,<2"
+description: Read-only. A cluster's nodes matched to inventory hosts, with their roles and versions, node readiness as host status, and drift against the cluster's feature (hosts that have the feature but aren't nodes, and the other way round).
+pages:
+  - {id: cluster, label: Cluster}
+settings:
+  - {key: url, label: API server, type: string, required: true, placeholder: "https://10.10.128.10:6443"}
+  - {key: token, label: Bearer token, type: secret, required: true, help: "A service account token with get/list on nodes and pods (read-only)"}
+  - {key: ca_pem, label: Cluster CA (PEM), type: text, help: "certificate-authority-data from the kubeconfig, decoded; empty = the system CAs"}
+  - {key: verify_tls, label: Check the TLS certificate, type: bool, default: true}
+  - {key: feature, label: The cluster's feature, type: string, help: "Feature path every node should have, e.g. kube.cluster.oak"}
+actions:
+  - {id: test, label: Check connection, mode: run}
+  - {id: poll, label: Read nodes, mode: run, schedulable: true, schedule_default: 5, description: "Node readiness as host status, roles and versions, drift against the feature"}
+widgets:
+  - {id: cluster, label: Cluster, where: dashboard}
+  - {id: node, label: Kubernetes node, where: host}
