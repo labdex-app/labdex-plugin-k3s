@@ -1,6 +1,6 @@
 # k3s / Kubernetes
 
-A [labdex](https://github.com/reykimedev/labdex) plugin. Read-only. A cluster's nodes matched to inventory hosts, with their roles and versions, node readiness as host status, and drift against the cluster's feature (hosts that have the feature but aren't nodes, and the other way round).
+A [labdex](https://github.com/labdex-app/labdex) plugin. Read-only. A cluster's nodes matched to inventory hosts, with their roles and versions, node readiness as host status, and drift against the cluster's feature (hosts that have the feature but aren't nodes, and the other way round).
 
 **Version** 1.0 · **Works with** labdex >=1.3,<2 · **Plugin id** `k3s`
 
