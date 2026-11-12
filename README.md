@@ -1,5 +1,7 @@
 # k3s / Kubernetes
 
+[![Release](https://github.com/labdex-app/labdex-plugin-k3s/actions/workflows/release.yml/badge.svg)](https://github.com/labdex-app/labdex-plugin-k3s/actions/workflows/release.yml) [![Buy Me a Coffee](https://img.shields.io/badge/buy%20me%20a%20coffee-bitsandbricks-7c3aed?logo=buymeacoffee&logoColor=white&labelColor=181b20)](https://buymeacoffee.com/bitsandbricks)
+
 A [labdex](https://github.com/labdex-app/labdex) plugin. Read-only. A cluster's nodes matched to inventory hosts, with their roles and versions, node readiness as host status, and drift against the cluster's feature (hosts that have the feature but aren't nodes, and the other way round).
 
 **Version** 1.0 · **Works with** labdex >=1.3,<2 · **Plugin id** `k3s`
